@@ -1,0 +1,30 @@
+{
+  "name": "uie-testing",
+  "version": "1.0.0",
+  "description": "Everything tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest --config=jest.unit.config.ts",
+    "test:integration": "jest --config=jest.integration.config.ts",
+    "start": "nodemon --watch src --ext ts,js --exec ts-node src/server.ts",
+    "build": "tsc",
+    "prod": "NODE_ENV=prod node ./dist/server.js"
+  },
+  "author": "Shashi Khanal",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1"
+  }
+}
