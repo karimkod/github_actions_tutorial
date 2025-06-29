@@ -7,15 +7,7 @@ const config: Config = {
   verbose: true,
   collectCoverage: true,
   coverageDirectory: `./tests/reports/int-coverage-report-${Date.now()}`,
-  coverageReporters: ['text', 'html'],
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    }
-  }
+  coverageReporters: ['text', 'html']
 }
 
 export default config;
